@@ -23,7 +23,8 @@ cap = cv2.VideoCapture(0)
 while True:
     ret,photo = cap.read()
     cv2.imshow('my pic', photo)
-    ret, buffer = cv2.imencode(".jpg", photo)
+    #ret, buffer = cv2.imencode(".jpg", photo)
+    buffer = imutils.resize(photo, width=100)
     x_as_bytes = pickle.dumps(buffer)
     s.sendto(x_as_bytes,(serverip , serverport))
     if cv2.waitKey(10) == 13:
