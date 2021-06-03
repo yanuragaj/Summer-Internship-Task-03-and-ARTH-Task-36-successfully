@@ -10,7 +10,7 @@ while True:
     print(data)
     data=pickle.loads(data)
     print(type(data))
-    #data = cv2.imdecode(data, cv2.IMREAD_COLOR)
+    data = cv2.imdecode(data, cv2.IMREAD_COLOR)
     cv2.imshow('my pic', data) #to open image
     if cv2.waitKey(10) == 13:
         break
