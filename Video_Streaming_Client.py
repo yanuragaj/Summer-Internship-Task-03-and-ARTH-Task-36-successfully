@@ -11,7 +11,6 @@ import cv2, socket, pickle, os
 
 
 s=socket.socket(socket.AF_INET , socket.SOCK_DGRAM)
-s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 10000000)
 serverip="192.168.43.54"
 serverport=307
 
